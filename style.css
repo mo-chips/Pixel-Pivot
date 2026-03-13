@@ -314,3 +314,39 @@ input:focus { border-color: var(--primary); outline: none; }
 .toggle .span:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
 }
+
+/* --- Transformation (About) Section Responsiveness --- */
+
+/* 1. Ensure the container handles padding correctly on mobile */
+#about .container {
+    padding: 40px 20px;
+}
+
+/* 2. Responsive Grid for the Transformation section */
+@media (max-width: 992px) {
+    #about .grid-2 {
+        grid-template-columns: 1fr; /* Stack columns on tablets and phones */
+        gap: 30px;
+        text-align: center; /* Better readability on mobile */
+    }
+}
+
+/* 3. Image Responsiveness: Vital to prevent horizontal scrolling */
+.about-image img {
+    max-width: 100%; /* Prevents the image from being wider than the screen */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;
+    margin: 0 auto;  /* Centers the image when stacked */
+}
+
+/* 4. Text adjustments for mobile */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.8rem; /* Slightly smaller title for small phones */
+    }
+    
+    #about p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
